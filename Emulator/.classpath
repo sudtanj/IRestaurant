@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="uph/Source/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="src/uph/en_us.jar"/>
+	<classpathentry kind="lib" path="src/uph/cmu_time_awb.jar"/>
+	<classpathentry kind="lib" path="src/uph/cmu_us_kal.jar"/>
+	<classpathentry kind="lib" path="src/uph/cmudict04.jar"/>
+	<classpathentry kind="lib" path="src/uph/cmulex.jar"/>
+	<classpathentry kind="lib" path="src/uph/cmutimelex.jar"/>
+	<classpathentry kind="lib" path="src/uph/freetts-jsapi10.jar"/>
+	<classpathentry kind="lib" path="src/uph/jsapi.jar"/>
+	<classpathentry kind="lib" path="src/uph/mbrola.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
