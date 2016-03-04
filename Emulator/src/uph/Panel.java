@@ -2,12 +2,14 @@ package uph;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
+import javax.swing.BoxLayout;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -21,8 +23,8 @@ public class Panel {
 	private static JFrame windows=new JFrame();
 	private static JLabel backgroundPicture=new JLabel();
 	private static JPanel waiterNote=new JPanel();
-	private static JScrollPane menuList1=new JScrollPane();
 	private static JPanel menuList=new JPanel();
+	private static JScrollPane menuList1=new JScrollPane(menuList);
 	
 	public static JFrame windows(){
 		windows.setBounds(250,120,Settings.getAppscreenwidth(),Settings.getAppscreenheight());
@@ -135,9 +137,9 @@ public class Panel {
 		return waiterNote;
 	}
 	public static JScrollPane menuList() throws IOException{
-		menuList.setBounds(0, 0, 500, 290);
 		menuList.setOpaque(true);
-		menuList.setLayout(new GridLayout());
+		menuList.setLayout(new FlowLayout());
+		menuList.setPreferredSize(new Dimension(800, 600));
 		int y=0;
 		if (Database.countDatabase(Settings.getMenuDatabase())<4){
 			for (int j=0;j<Database.countDatabase(Settings.getMenuDatabase());j++){
@@ -145,7 +147,7 @@ public class Panel {
 				menuList.add(productDetail(hasil[1],hasil[0],hasil[2],y));
 				menuList.revalidate();
 				menuList.repaint();
-				y+=2;
+				y+=150;
 			}
 		}
 		else {
@@ -156,7 +158,7 @@ public class Panel {
 					menuList.add(productDetail(hasil[1],hasil[0],hasil[2],y));
 					menuList.revalidate();
 					menuList.repaint();
-				y+=2;
+				y+=150;
 				}
 				batas+=4;
 		}
@@ -168,7 +170,8 @@ public class Panel {
 		menuList1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		menuList1.setVisible(true);
 		menuList1.setBounds(0,150,480,290);
-		menuList1.setPreferredSize(new Dimension(400, 200));
+		menuList1.validate();
+		menuList1.repaint();
 		return menuList1;
 	}
 	public static JLabel productDetail(String image,String name,String price,int x){
