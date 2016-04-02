@@ -42,6 +42,7 @@ public class Database {
 	
 		try (BufferedWriter out = new BufferedWriter(new FileWriter(filePath, true))){
 		out.write(input);
+		out.write("\n");
 		}
 		catch (IOException ioe){
 			 System.out.println("Exception occurred:");

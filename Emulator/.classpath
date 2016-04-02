@@ -11,5 +11,10 @@
 	<classpathentry kind="lib" path="src/uph/freetts-jsapi10.jar"/>
 	<classpathentry kind="lib" path="src/uph/jsapi.jar"/>
 	<classpathentry kind="lib" path="src/uph/mbrola.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files (x86)/JMF2.1.1e/lib/customizer.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files (x86)/JMF2.1.1e/lib/jmf.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files (x86)/JMF2.1.1e/lib/mediaplayer.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files (x86)/JMF2.1.1e/lib/multiplayer.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files (x86)/JMF2.1.1e/lib/sound.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

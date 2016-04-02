@@ -91,4 +91,64 @@ public class Translation {
 		}
 		return "";
 	}
+	public static String buy(){
+		if (Settings.getLang()=="English"){
+			return "I Want This";
+		}
+		return "";
+	}
+	public static String callHelp(){
+		if (Settings.getLang()=="English"){
+			return "Need Help!";
+		}
+		return "";
+	}
+	public static String callHelpDesc(){
+		if (Settings.getLang()=="English"){
+			return "This button will notify the waiter to come to your table for assistance.";
+		}
+		return "";
+	}
+	public static String menuText(){
+		if (Settings.getLang()=="English"){
+			return "Menu";
+		}
+		return "";
+	}
+	public static String payWith(){
+		if (Settings.getLang()=="English"){
+			return "Pay With";
+		}
+		return "";
+	}
+	public static String creditCard(){
+		if (Settings.getLang()=="English"){
+			return "Credit Card";
+		}
+		return "";
+	}
+	public static String payCash(){
+		if (Settings.getLang()=="English"){
+			return "Cash";
+		}
+		return "";
+	}
+	public static String payCashDescription(){
+		if (Settings.getLang()=="English"){
+			return "A waiter will be here shortly to handle cash payment. Please wait a moment. Thank you!";
+		}
+		return "";
+	}
+	public static String payCreditCardDescription(){
+		if (Settings.getLang()=="English"){
+			return "Please enter your credit card number on the following provided box! Thank you!";
+		}
+		return "";
+	}
+	public static String pendingOrderDescription(){
+		if (Settings.getLang()=="English"){
+			return "Thank you for paying! your meal will be done shortly! please wait while enjoy our entertaiment services";
+		}
+		return "";
+	}
 }

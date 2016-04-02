@@ -24,7 +24,7 @@ public class Main implements ActionListener{
 			welcomeSign.setText(welcomeSign.getText()+hasil[i]);
 			Panel.backgroundPage().add(welcomeSign);
 			Panel.windows().add(Panel.backgroundPage(), BorderLayout.WEST);
-			Thread.sleep(500);
+			//Thread.sleep(500);
 		}
 		Speech.speak(Translation.welcomeSpeak());
 		Panel.backgroundPage().remove(welcomeSign);
