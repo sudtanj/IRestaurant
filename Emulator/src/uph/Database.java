@@ -42,6 +42,7 @@ public class Database {
 	
 		try (BufferedWriter out = new BufferedWriter(new FileWriter(filePath, true))){
 		out.write(input);
+		out.write("\n");
 		}
 		catch (IOException ioe){
 			 System.out.println("Exception occurred:");
@@ -50,6 +51,54 @@ public class Database {
 	}
 	public static void databaseRemove (String input,String filePath){
 		   new Database().removeLineFromFile(filePath,input );
+	}
+	public static void databaseRemoveAll (String filePath){
+
+	    try {
+	 
+	      File inFile = new File(filePath);
+	      
+	      if (!inFile.isFile()) {
+	        System.out.println("Parameter is not an existing file");
+	        return;
+	      }
+	       
+	      //Construct the new file that will later be renamed to the original filename. 
+	      File tempFile = new File(inFile.getAbsolutePath() + ".tmp");
+	      
+	      BufferedReader br = new BufferedReader(new FileReader(filePath));
+	      PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+	      
+	      String line = null;
+	 
+	      //Read from the original file and write to the new 
+	      //unless content matches data to be removed.
+	      while ((line = br.readLine()) != null) {
+	    	  if (!line.trim().equals(line)) {
+	          pw.println(line);
+	          pw.flush();
+	    	  }
+	      }
+	      pw.close();
+	      br.close();
+	      
+	      //Delete the original file
+	      if (!inFile.delete()) {
+	        System.out.println("Could not delete file");
+	        return;
+	      } 
+	      
+	      //Rename the new file to the filename the original file had.
+	      if (!tempFile.renameTo(inFile))
+	        System.out.println("Could not rename file");
+	      
+	    }
+	    catch (FileNotFoundException ex) {
+	      ex.printStackTrace();
+	    }
+	    catch (IOException ex) {
+	      ex.printStackTrace();
+	    }
 	}
 	/*
 	 * Special method

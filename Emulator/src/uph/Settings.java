@@ -12,6 +12,7 @@ public class Settings {
 	private static String appCurrentlang="English";
 	private static String notificationDatabase=new File("notification.database").getAbsolutePath().toString();
 	private static String menuDatabase=new File("menu.database").getAbsolutePath().toString();
+	private static String orderDatabase=new File("order.database").getAbsolutePath().toString();
 	
 	public static String getMenuDatabase(){
 		return menuDatabase;
@@ -19,8 +20,14 @@ public class Settings {
 	public static ImageIcon getAppbackground(){
 		return appBackgroundimage;
 	}
+	public static void setLanguage(String lang){
+		appCurrentlang=lang;
+	}
 	public static String getdatabaseNotification(){
 		return notificationDatabase;
+	}
+	public static String getOrderDatabase(){
+		return orderDatabase;
 	}
 	public static void setAppname(String changeappname){
 		appName=changeappname;
