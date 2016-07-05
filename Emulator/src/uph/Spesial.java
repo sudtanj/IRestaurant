@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Spesial {
 	public static int advancedrandom (int seed,int batas){
-		return (new Random().nextInt(batas)*seed+(int)System.currentTimeMillis())%batas+1;
+		return Math.abs((new Random().nextInt(batas)*seed+(int)System.currentTimeMillis())%batas+1);
 	}
 	public static float advancedcalculator(String input){
 		String[] parts=input.split("");

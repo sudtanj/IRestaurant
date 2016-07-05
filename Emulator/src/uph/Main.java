@@ -7,10 +7,10 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class Main implements ActionListener{
 	public static void main(String[] args) throws InterruptedException, IOException{
-		System.out.print(Database.checkDatabase(0+1, Settings.getMenuDatabase()));
 		String[] hasil=Translation.welcomeText().split("");
 		
 		JLabel welcomeSign = new JLabel();
@@ -24,14 +24,14 @@ public class Main implements ActionListener{
 			welcomeSign.setText(welcomeSign.getText()+hasil[i]);
 			Panel.backgroundPage().add(welcomeSign);
 			Panel.windows().add(Panel.backgroundPage(), BorderLayout.WEST);
-			Thread.sleep(500);
+			//Thread.sleep(500);
 		}
 		Speech.speak(Translation.welcomeSpeak());
 		Panel.backgroundPage().remove(welcomeSign);
 		Panel.backgroundPage().revalidate();
 		Panel.backgroundPage().repaint();
 		
-		Panel.backgroundPage().add(Panel.loginPage());
+		Panel.backgroundPage().add(Panel.languagePanel());
 		Panel.backgroundPage().revalidate();
 		Panel.backgroundPage().repaint();
 		/* Notification
@@ -55,8 +55,7 @@ public class Main implements ActionListener{
 		Panel.windows().revalidate();
 		Panel.windows().repaint();
 		Thread.sleep(500);
-		
-		uph.Speech.speak(Translation.loginQuestionSpeak());
+
 	}
 
 	@Override
