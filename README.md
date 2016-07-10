@@ -5,3 +5,4 @@ This is a project about making a software that can manage a restaurant. this sof
 
 ### Screenshot (Click the screenshot for videos)###
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TJu4jBt3Ajo/0.jpg)](https://www.youtube.com/watch?v=TJu4jBt3Ajo)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/xJj2W7mrh0U/0.jpg)](https://www.youtube.com/watch?v=xJj2W7mrh0U)
