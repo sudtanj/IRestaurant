@@ -1,29 +1,7 @@
-# README #
+# IRestaurant #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a project about making a software that can manage a restaurant. this software is open for public after being used for student university project purposed. anyone is free to more developed this software. thanks
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### Screenshot ###
+Coming soon
